@@ -45,6 +45,7 @@ a {
   height: 90px;
   font-size: 18px;
   padding: 0 50px;
+  background-color: #fff;
 
 }
 
@@ -143,5 +144,22 @@ section {
 .info {
   display: flex;
   justify-content: space-around;
+
+}
+
+#section-1 {
+  background-color: #f1f1f1;
+  
+}
+#section-2 {
+  background-color: #fff;
+  
+}
+#section-3 {
+  background-color: #fff;
+
+}
+#section-4 {
+  background-color: #f1f1f1;
 
 }
