@@ -1,12 +1,19 @@
 @charset "utf-8";
 
-html, body {
+html,
+body {
   width: 100%;
-  height: 10000px;
-  
+  height: 100%;
+
 }
 
-body, a, ul, ol, h1, h2 {
+body,
+a,
+ul,
+ol,
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
 
@@ -17,7 +24,8 @@ body * {
 
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 
 }
@@ -26,7 +34,7 @@ ol, ul {
 a {
   text-decoration: none;
   color: black;
-  
+
 }
 
 /* ////////////////////////////////////////////////////////////// */
@@ -37,7 +45,7 @@ a {
   height: 90px;
   font-size: 18px;
   padding: 0 50px;
-  
+
 }
 
 .header-container {
@@ -45,37 +53,39 @@ a {
   height: 100%;
   justify-content: space-between;
   align-items: center;
-  
+
 }
 
 .nav-container {
   width: 38.5%;
   height: 30%;
   display: flex;
-  
+
 }
 
 .nav-widget {
   width: 23.5%;
   display: flex;
-  
+
 }
 
 .logo {
   width: 50%;
   display: block;
+
 }
 
 nav {
   width: 100%;
   margin-left: 30px;
+
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  
+
 }
 
 .nav-menu a:hover {
@@ -86,7 +96,7 @@ nav {
 
 .widget-hash {
   display: flex;
-  
+
 }
 
 .hash-rolling-wrap {
@@ -95,16 +105,43 @@ nav {
 
 .rolling-list {
   position: relative;
-  top: 10px;
+  top: 0px;
   height: 24px;
   font-weight: bolder;
   animation: downHill 5s linear infinite;
-  
+
 }
 
 @keyframes downHill {
   to {
-      top: -69.5px;
+    top: -73px;
 
   }
+}
+
+section {
+  height: 100%;
+
+}
+
+
+.footer_wrap {
+  display: flex;
+  padding: 0 50px;
+  width: calc(100% - 100px);
+  height: 61px;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.footer-nav-menu {
+  display: flex;
+
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+
 }
