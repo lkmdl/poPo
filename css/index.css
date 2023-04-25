@@ -33,6 +33,7 @@ a {
 
 .header_wrap {
   height: 90px;
+  font-size: 18px;
   padding: 0 50px;
   
 }
@@ -46,15 +47,32 @@ a {
 }
 
 .nav-container {
-  width: 40%;
+  width: 38.5%;
   height: 30%;
   display: flex;
   
 }
 
 .nav-widget {
-  width: 15%;
+  width: 23.5%;
   display: flex;
+  
+}
+
+.logo {
+  width: 50%;
+  display: block;
+}
+
+nav {
+  width: 100%;
+  margin-left: 30px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   
 }
 
@@ -63,17 +81,11 @@ a {
   
 }
 
-.logo {
-  display: block;
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  
-}
-
 .rolling-list {
+  position: relative;
+  height: 24px;
   font-weight: bolder;
+  overflow: hidden;
+  animation: bottom Go 5s linear infinite;
   
 }
