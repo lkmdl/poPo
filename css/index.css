@@ -2,12 +2,13 @@
 
 html,
 body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
 
 }
 
-body,
 a,
 ul,
 ol,
@@ -20,7 +21,7 @@ h3 {
 }
 
 body * {
-  /* outline: 1px dotted red; */
+  outline: 1px dotted red;
 
 }
 
@@ -35,6 +36,12 @@ a {
   text-decoration: none;
   color: black;
 
+}
+
+.sl {
+  margin: 0 8.5%;
+  padding: 0 1.5%;
+  
 }
 
 /* ////////////////////////////////////////////////////////////// */
@@ -101,13 +108,14 @@ nav {
 }
 
 .hash-rolling-wrap {
+  height: 24px;
   overflow: hidden;
 }
 
 .rolling-list {
   position: relative;
   top: 0px;
-  height: 24px;
+  height: 100%;
   font-weight: bolder;
   animation: downHill 5s linear infinite;
 
@@ -115,13 +123,13 @@ nav {
 
 @keyframes downHill {
   to {
-    top: -73px;
+    top: -400%;
 
   }
 }
 
 section {
-  height: 100%;
+  height: calc(100% - 90px);
 
 }
 
@@ -147,17 +155,25 @@ section {
 
 }
 
+/********************************************************/
+
+#container {
+  padding-top: 90px;
+  background-color: aquamarine;
+
+}
+
 #section-1 {
-  background-color: #f1f1f1;
-  
+  background-color: #fff;
+
 }
 #section-2 {
-  background-color: #fff;
+  background-color: #f1f1f1;
   
 }
 #section-3 {
   background-color: #fff;
-
+  
 }
 #section-4 {
   background-color: #f1f1f1;
