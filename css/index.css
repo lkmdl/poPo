@@ -6,6 +6,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
+  font-size: 36px;
 
 }
 
@@ -38,10 +39,14 @@ a {
 
 }
 
-.sl {
+.inner-gred {
   margin: 0 8.5%;
   padding: 0 1.5%;
-  
+
+}
+
+.text-gred {
+  padding: 0 1.3%;
 }
 
 /* ////////////////////////////////////////////////////////////// */
@@ -161,6 +166,10 @@ section {
   padding-top: 90px;
   background-color: aquamarine;
 
+}
+
+.title {
+  margin-top: 95px;
 }
 
 #section-1 {
