@@ -138,7 +138,7 @@ nav {
 }
 
 section {
-  height: calc(100vh - 90px);
+  height: calc(100vh);
 
 }
 
@@ -186,5 +186,10 @@ section {
 }
 #section-4 {
   background-color: #f1f1f1;
+
+}
+#section-5 {
+    height: calc(100vh - 61px);
+    background-image: url(../img/자화상-최재용.png);
 
 }
