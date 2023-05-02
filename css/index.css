@@ -126,11 +126,11 @@ nav {
   height: 100%;
   font-size: 2em;
   font-weight: bolder;
-  animation: downHill 10s linear infinite;
+  animation: rolling 10s linear infinite;
 
 }
 
-@keyframes downHill {
+@keyframes rolling {
   to {
     top: -800%;
 
@@ -169,6 +169,10 @@ section {
 #container {
   padding-top: 90px;
   /* background-color: aquamarine; */
+
+}
+
+#section-banner {
 
 }
 

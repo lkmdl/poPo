@@ -9,10 +9,8 @@ window.addEventListener("DOMContentLoaded",()=>{
   console.log("2023.04.25 inner layout ~");
 
   console.log("2023.04.26 inner layout ~ ");//4th
-  
+
   console.log("2023.04.27 inner layout ~");//5th
   console.log("2023.04.27 text layout complete");
-
-
   
 });
