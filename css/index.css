@@ -23,7 +23,7 @@ h3 {
 }
 
 body * {
-  outline: 1px dotted red;
+  /* outline: 1px dotted red; */
 
 }
 
@@ -46,15 +46,26 @@ a {
 
 }
 
+.full-gred {
+  padding: 0 8.5%;
+
+}
+
 .text-gred {
-  padding: 90 1.3% 0 1.3%;
+  padding: 90 0 0 0;
 
 }
 
 .text-sub-gred {
   width: 100%;
   display: block;
-  border-bottom: 1px solid #ccc;
+  
+}
+
+.solid {
+  margin-top: 10px;
+  display: block;
+  border-bottom: 1px solid #000;
 
 }
 
