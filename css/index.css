@@ -7,7 +7,7 @@ body {
   width: 100%;
   height: 100%;
   font-size: 36px;
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 
 }
 
@@ -59,7 +59,7 @@ a {
 .text-sub-gred {
   width: 100%;
   display: block;
-  
+
 }
 
 .solid {
@@ -124,7 +124,7 @@ nav {
 .nav-menu a:hover {
   text-decoration: underline 2px;
   color: black;
-  
+
 
 }
 
@@ -189,9 +189,7 @@ section {
 
 }
 
-#section-banner {
-
-}
+#section-banner {}
 
 #section-banner img {
   width: 100%;
@@ -204,21 +202,40 @@ section {
   background-color: #fff;
 
 }
+
 #section-2 {
   background-color: #f1f1f1;
+
+}
+
+.table {
+  width: 100%;
+  height: 50%;
   
 }
+
+.table td {
+  padding: clamp(10px, 2vw, 36px) clamp(10px, 2vw, 28px);
+  /* 10px 크기를 가지며 최소 2vw, 그리고 최대 36px 까지 커질 수 있습니다 */
+  /* 10px 크기를 가지며 최소 2vw, 그리고 최대 28px 까지 커질 수 있습니다 */
+  font-size: 1em;
+  border-bottom: 2px dotted #000;
+
+}
+
 #section-3 {
   background-color: #fff;
-  
+
 }
+
 #section-4 {
   background-color: #f1f1f1;
 
 }
+
 #section-5 {
   height: calc(100vh - 61px);
-  
+
 }
 
 #section-5 img {
