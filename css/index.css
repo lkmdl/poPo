@@ -219,7 +219,7 @@ section {
   /* 10px 크기를 가지며 최소 2vw, 그리고 최대 36px 까지 커질 수 있습니다 */
   /* 10px 크기를 가지며 최소 2vw, 그리고 최대 28px 까지 커질 수 있습니다 */
   font-size: 1em;
-  border-bottom: 2px dotted #000;
+  border-bottom: .5px dotted #000;
 
 }
 
