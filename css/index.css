@@ -23,7 +23,7 @@ h3 {
 }
 
 body * {
-  outline: 1px dotted red;
+  /* outline: 1px dotted tomato; */
 
 }
 
@@ -105,8 +105,15 @@ a {
 .logo {
   width: 50%;
   display: block;
-
+  
 }
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+
 
 nav {
   width: 100%;
@@ -181,9 +188,10 @@ section {
 }
 
 .info {
-  width: 30%;
+  width: 40%;
   display: flex;
   font-size: .4em;
+  align-items: center;
   justify-content: space-around;
 
 }
