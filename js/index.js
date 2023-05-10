@@ -1,8 +1,8 @@
 window.addEventListener("DOMContentLoaded",()=>{
-  let empty1 = document.querySelector(".nav-menu");
-  let empty2 = document.querySelector(".footer-nav-menu");
+  let empty1 = document.querySelectorAll(".nav-menu a");
   
-  empty1, empty2.onclick = ()=> {
+  this.empty1.onclick = ()=> {
+    console.log(empty1)
     alert("준비중입니다...");
 
   }
