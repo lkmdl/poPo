@@ -1,5 +1,4 @@
 window.addEventListener("DOMContentLoaded", () => {
-
   const empty = document.querySelectorAll(".nav-menu li a")
 
   for (let i = 0; i < empty.length; i++) {
