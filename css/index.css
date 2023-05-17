@@ -248,6 +248,12 @@ footer .nav-menu {
 .popo-box2 {
    overflow-y: scroll;
    scroll-behavior: smooth;
+
+}
+
+.popo-box2 > div > a {
+  display: block;
+
 }
 
 

@@ -3,7 +3,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
   for (let i = 0; i < empty.length; i++) {
-
     function em() {
       alert("준비중입니다...");
       console.log("gd");
