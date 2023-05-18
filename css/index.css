@@ -23,7 +23,7 @@ h3 {
 }
 
 body * {
-  outline: 1px dotted tomato;
+  /* outline: 1px dotted tomato; */
 
 }
 
@@ -231,6 +231,11 @@ footer .nav-menu {
 
 }
 
+.poPo-box {
+  width: 25%;
+
+}
+
 .poPo-box > img {  
   width: 100%;
   height: 50%;
@@ -238,10 +243,11 @@ footer .nav-menu {
 
 }
 
-.poPo-box > img:hover {
+.poPo-box:hover img {
   transform: rotateY(180deg);
   filter: blur(2px);
-
+  transition: transform 2s;
+  
 }
 
 #section-2 {
