@@ -226,39 +226,23 @@ footer .nav-menu {
 .section-1_box {
   display: flex;
   height: calc(100% - 175px);
+  align-items: center;
+  justify-content: space-around;
 
 }
 
-.section-1_box> div {
-  width: 50%;
-  height: 100%;
-
-}
-
-.section-1_box img{
+.poPo-box > img {  
   width: 100%;
-  height: 100%;
-}
-
-.popo-box2::-webkit-scrollbar {
-  display: none;  
+  height: 50%;
+  border-radius: 50%;
 
 }
 
-.popo-box2 {
-   overflow-y: scroll;
-   scroll-behavior: smooth;
+.poPo-box > img:hover {
+  transform: rotateY(180deg);
+  filter: blur(2px);
 
 }
-
-.popo-box2 > div > a {
-  display: block;
-
-}
-
-
-
-
 
 #section-2 {
   background-color: #f1f1f1;

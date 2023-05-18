@@ -14,9 +14,13 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   window.addEventListener('scroll', function(){
-    console.log( window.scrollY )
+    function scrollingY() {
+      console.log( window.scrollY )
+      
+    }
+    scrollingY();
     
-    if (condition) {
+    if (11) {
       
     }
   });
