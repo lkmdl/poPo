@@ -153,11 +153,11 @@ header .nav-menu {
   height: 100%;
   font-size: 2em;
   font-weight: bolder;
-  animation: rolling 10s linear infinite;
+  animation: rollingNav 10s linear infinite;
 
 }
 
-@keyframes rolling {
+@keyframes rollingNav {
   to {
     top: -800%;
 
@@ -230,25 +230,11 @@ footer .nav-menu {
   left: calc(50% - 150px);
   width: 300px;
   height: 300px;
-  /* outline: 2px solid #000; */
-
-  /* 
-      [ 입체로 설정하기! ]
-      - 입체로 설정할 요소의 부모박스에 아래와 같이
-      설정한다!
-
-      transform-style: preserve-3d;
-
-      - 기본값은 flat, 즉 2D
-      - preserve-3d 는 3D 전환설정!
-  */
   transform-style: preserve-3d;
-
-  /* 입체를 잘보이게 하기위해 x축, y축으로 약간회전 */
   transform: rotateX(0deg) rotateY(0deg);
-  /* transform: rotateX(10deg) rotateY(30deg); */
 
   animation: rolling 5s linear infinite;
+
 }
 /* 큐브 각면 공통 */
 .cube>span{
@@ -289,15 +275,8 @@ footer .nav-menu {
 @keyframes rolling {
   to{
       transform: rotateX(360deg) rotateY(360deg);
-      /* 
-          x축은 10도 나가있고 같은 방향(+)으로
-          한바퀴 회전하려면 360도+10도=370도
-
-          y축은 30도 나가있고 반대 방향(-)으로
-          한바퀴 회전하려면 -360도+30도=-330도
-      */
   }
-} /* 키프레임 */
+}
 
 img {
 width: 100%;
