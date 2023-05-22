@@ -219,6 +219,7 @@ footer .nav-menu {
 
 
 #section-1 {
+  position: relative;
   background-color: #fff;
 
 }
@@ -260,24 +261,20 @@ footer .nav-menu {
 }
 /* 1.앞면 */
 .cube>span:first-child{
-  background-color: red;
   transform: translateZ(150px);
 }
 /* 2.오른쪽면 */
 .cube>span:nth-child(2){
-  background-color: green;
   transform: rotateY(90deg) translateZ(150px);
   /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
 }
 /* 3.뒷면 */
 .cube>span:nth-child(3){
-  background-color: orange;
   transform: rotateY(180deg) translateZ(150px);
   /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
 }
 /* 4.왼쪽면 */
 .cube>span:nth-child(4){
-  background-color: yellow;
   transform: rotateY(-90deg) translateZ(150px);
   /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
 }
