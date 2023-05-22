@@ -223,31 +223,88 @@ footer .nav-menu {
 
 }
 
-.section-1_box {
-  display: flex;
-  height: calc(100% - 175px);
-  align-items: center;
-  justify-content: space-around;
+.cube{
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 300px;
+  /* outline: 2px solid #000; */
 
+  /* 
+      [ 입체로 설정하기! ]
+      - 입체로 설정할 요소의 부모박스에 아래와 같이
+      설정한다!
+
+      transform-style: preserve-3d;
+
+      - 기본값은 flat, 즉 2D
+      - preserve-3d 는 3D 전환설정!
+  */
+  transform-style: preserve-3d;
+
+  /* 입체를 잘보이게 하기위해 x축, y축으로 약간회전 */
+  transform: rotateX(0deg) rotateY(0deg);
+  /* transform: rotateX(10deg) rotateY(30deg); */
+
+  animation: rolling 5s linear infinite;
 }
-
-.poPo-box {
-  width: 25%;
-
-}
-
-.poPo-box > img {  
+/* 큐브 각면 공통 */
+.cube>span{
+  position: absolute;
+  /* 앱솔루트는 자동 block전환! */
   width: 100%;
-  height: 50%;
-  border-radius: 50%;
+  height: 100%;
 
+  
+}
+/* 1.앞면 */
+.cube>span:first-child{
+  background-color: red;
+  transform: translateZ(150px);
+}
+/* 2.오른쪽면 */
+.cube>span:nth-child(2){
+  background-color: green;
+  transform: rotateY(90deg) translateZ(150px);
+  /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
+}
+/* 3.뒷면 */
+.cube>span:nth-child(3){
+  background-color: orange;
+  transform: rotateY(180deg) translateZ(150px);
+  /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
+}
+/* 4.왼쪽면 */
+.cube>span:nth-child(4){
+  background-color: yellow;
+  transform: rotateY(-90deg) translateZ(150px);
+  /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
 }
 
-.poPo-box:hover img {
-  transform: rotateY(180deg);
-  filter: blur(2px);
-  transition: transform 2s;
-  
+/* 애니호출 class */
+.cube-ani {
+  /* 애니메이션: 이시이지반방마 */
+  animation: rolling .5s linear infinite;
+}
+
+/* 큐브회전 애니메이션 키프레임 */
+@keyframes rolling {
+  to{
+      transform: rotateY(360deg);
+      /* 
+          x축은 10도 나가있고 같은 방향(+)으로
+          한바퀴 회전하려면 360도+10도=370도
+
+          y축은 30도 나가있고 반대 방향(-)으로
+          한바퀴 회전하려면 -360도+30도=-330도
+      */
+  }
+} /* 키프레임 */
+
+img {
+width: 100%;
+height: 100%;
 }
 
 #section-2 {
