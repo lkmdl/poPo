@@ -228,8 +228,8 @@ footer .nav-menu {
   position: absolute;
   /* top: calc(50% - 150px);
   left: calc(50% - 150px); */
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(0deg);
   animation: rolling 5s linear infinite;
@@ -239,7 +239,7 @@ footer .nav-menu {
 .cube-wrap {
   position: relative;
   margin-top: 90px;
-  width: 400px;
+  width: 300px;
   height: 400px;
   top: calc(20% - 200px);
   left: calc(50% - 200px);
@@ -247,7 +247,7 @@ footer .nav-menu {
 
 }
 
-.cube>span {
+.cube>div {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -262,37 +262,25 @@ footer .nav-menu {
 
 
 /* 1.앞면 */
-.cube>span:first-child {
-  transform: translateZ(700px);
+.cube>div:first-child {
+  transform: translateZ(400px);
 }
 
 /* 2.오른쪽면 */
-.cube>span:nth-child(2) {
-  transform: rotateY(90deg) translateZ(700px);
+.cube>div:nth-child(2) {
+  transform: rotateY(90deg) translateZ(400px);
   /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
 }
 
 /* 3.뒷면 */
-.cube>span:nth-child(3) {
-  transform: rotateY(180deg) translateZ(700px);
+.cube>div:nth-child(3) {
+  transform: rotateY(180deg) translateZ(400px);
   /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
 }
 
 /* 4.왼쪽면 */
-.cube>span:nth-child(4) {
-  transform: rotateY(-90deg) translateZ(700px);
-  /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
-}
-
-.cube>span:nth-child(5) {
-  background-color: blue;
-  transform: rotateX(90deg) translateZ(700px);
-  /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
-}
-
-.cube>span:nth-child(6) {
-  background-color: purple;
-  transform: rotateX(-90deg) translateZ(700px);
+.cube>div:nth-child(4) {
+  transform: rotateY(-90deg) translateZ(400px);
   /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
 }
 
@@ -302,7 +290,7 @@ footer .nav-menu {
 
 @keyframes rolling {
   to {
-    transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateY(360deg);
   }
 }
 
