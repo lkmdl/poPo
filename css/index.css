@@ -238,16 +238,15 @@ footer .nav-menu {
 
 .cube-wrap {
   position: relative;
-  margin-top: 90px;
-  width: 300px;
-  height: 400px;
-  top: calc(20% - 200px);
-  left: calc(50% - 200px);
+  width: 450px;
+  height: 450px;
+  top: calc(35% - 225px);
+  left: calc(50% - 225px);
 
 
 }
 
-.cube>div {
+.cube > div {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -262,24 +261,24 @@ footer .nav-menu {
 
 
 /* 1.앞면 */
-.cube>div:first-child {
+.cube > div:first-child {
   transform: translateZ(400px);
 }
 
 /* 2.오른쪽면 */
-.cube>div:nth-child(2) {
+.cube > div:nth-child(2) {
   transform: rotateY(90deg) translateZ(400px);
   /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
 }
 
 /* 3.뒷면 */
-.cube>div:nth-child(3) {
+.cube > div:nth-child(3) {
   transform: rotateY(180deg) translateZ(400px);
   /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
 }
 
 /* 4.왼쪽면 */
-.cube>div:nth-child(4) {
+.cube > div:nth-child(4) {
   transform: rotateY(-90deg) translateZ(400px);
   /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
 }
