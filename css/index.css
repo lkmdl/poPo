@@ -221,62 +221,78 @@ footer .nav-menu {
 
 #section-1 {
   background-color: #fff;
-  
+
 }
 
 .cube {
   position: absolute;
   /* top: calc(50% - 150px);
   left: calc(50% - 150px); */
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(0deg);
   animation: rolling 5s linear infinite;
-  
+
 }
 
 .cube-wrap {
   position: relative;
   margin-top: 90px;
-  width: 300px;
-  height: 300px;
-  top: calc(30% - 150px);
-  left: calc(50% - 150px);
+  width: 400px;
+  height: 400px;
+  top: calc(20% - 200px);
+  left: calc(50% - 200px);
+
 
 }
 
-.cube > span {
+.cube>span {
   position: absolute;
   width: 100%;
   height: 100%;
-  
-  
+
+
 }
 
 .cube-wrap:hover .cube {
   animation-play-state: paused;
-    
+
 }
 
 
 /* 1.앞면 */
-.cube>span:first-child{
-  transform: translateZ(150px);
+.cube>span:first-child {
+  transform: translateZ(700px);
 }
+
 /* 2.오른쪽면 */
-.cube>span:nth-child(2){
-  transform: rotateY(90deg) translateZ(150px);
+.cube>span:nth-child(2) {
+  transform: rotateY(90deg) translateZ(700px);
   /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
 }
+
 /* 3.뒷면 */
-.cube>span:nth-child(3){
-  transform: rotateY(180deg) translateZ(150px);
+.cube>span:nth-child(3) {
+  transform: rotateY(180deg) translateZ(700px);
   /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
 }
+
 /* 4.왼쪽면 */
-.cube>span:nth-child(4){
-  transform: rotateY(-90deg) translateZ(150px);
+.cube>span:nth-child(4) {
+  transform: rotateY(-90deg) translateZ(700px);
+  /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
+}
+
+.cube>span:nth-child(5) {
+  background-color: blue;
+  transform: rotateX(90deg) translateZ(700px);
+  /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
+}
+
+.cube>span:nth-child(6) {
+  background-color: purple;
+  transform: rotateX(-90deg) translateZ(700px);
   /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
 }
 
@@ -285,14 +301,14 @@ footer .nav-menu {
 }
 
 @keyframes rolling {
-  to{
-      transform: rotateX(360deg) rotateY(360deg);
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
   }
 }
 
 img {
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 #section-2 {
@@ -311,8 +327,6 @@ height: 100%;
 .table td {
   width: 25%;
   padding: 2.5% 2%;
-  /* 10px 크기를 가지며 최소 2vw, 그리고 최대 36px 까지 커질 수 있습니다 */
-  /* 10px 크기를 가지며 최소 2vw, 그리고 최대 28px 까지 커질 수 있습니다 */
   font-size: 1em;
   border-bottom: .5px dotted #000;
   text-align: center;
