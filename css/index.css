@@ -165,12 +165,6 @@ header .nav-menu {
   }
 }
 
-section {
-  height: 100%;
-
-}
-
-
 .footer_wrap {
   display: flex;
   padding: 0 50px;
@@ -203,12 +197,33 @@ footer .nav-menu {
 
 }
 
+.toggleBtn {
+  display: block;
+  position: absolute;
+  top: 19.5%;
+  right: 37px;
+  transform: translate(0, -50%) rotate(225deg);
+  width: 16px;
+  height: 16px;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  transition: transform .1s;
+
+}
+
 /********************************************************/
 
 #container {
   padding-top: 90px;
 
 }
+
+
+section {
+  height: 100%;
+
+}
+
 
 #section-banner {}
 
@@ -224,79 +239,6 @@ footer .nav-menu {
 
 }
 
-.cube {
-  position: absolute;
-  /* top: calc(50% - 150px);
-  left: calc(50% - 150px); */
-  width: 450px;
-  height: 450px;
-  transform-style: preserve-3d;
-  transform: rotateX(0deg) rotateY(0deg);
-  animation: rolling 5s linear infinite;
-
-}
-
-.cube-wrap {
-  position: relative;
-  width: 450px;
-  height: 450px;
-  top: calc(35% - 225px);
-  left: calc(50% - 225px);
-
-
-}
-
-.cube > div {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-
-
-}
-
-.cube-wrap:hover .cube {
-  animation-play-state: paused;
-
-}
-
-
-/* 1.앞면 */
-.cube > div:first-child {
-  transform: translateZ(400px);
-}
-
-/* 2.오른쪽면 */
-.cube > div:nth-child(2) {
-  transform: rotateY(90deg) translateZ(400px);
-  /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
-}
-
-/* 3.뒷면 */
-.cube > div:nth-child(3) {
-  transform: rotateY(180deg) translateZ(400px);
-  /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
-}
-
-/* 4.왼쪽면 */
-.cube > div:nth-child(4) {
-  transform: rotateY(-90deg) translateZ(400px);
-  /* y축회전먼저하고 z축밀기를 해야함!(순서중요) */
-}
-
-.cube-ani {
-  animation: rolling .5s linear infinite;
-}
-
-@keyframes rolling {
-  to {
-    transform: rotateY(360deg);
-  }
-}
-
-img {
-  width: 100%;
-  height: 100%;
-}
 
 #section-2 {
   background-color: #f1f1f1;
