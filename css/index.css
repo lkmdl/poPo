@@ -42,8 +42,7 @@ a {
 }
 
 .inner-gred {
-  margin: 0 8.5%;
-  padding: 0 1.5%;
+  margin: 0 10%;
 
 }
 
@@ -68,6 +67,26 @@ a {
   margin-top: 10px;
   display: block;
   border-bottom: 1px solid #000;
+
+}
+
+.rel {
+  position: relative;
+
+}
+
+.toggleBtn {
+  position: absolute;
+  display: block;
+  top: 75%;
+  right: 37px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transform: translate(0, -50%) rotate(225deg);
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  transition: transform .1s;
 
 }
 
@@ -194,20 +213,6 @@ footer .nav-menu {
   font-size: .4em;
   align-items: center;
   justify-content: space-around;
-
-}
-
-.toggleBtn {
-  display: block;
-  position: absolute;
-  top: 19.5%;
-  right: 37px;
-  transform: translate(0, -50%) rotate(225deg);
-  width: 16px;
-  height: 16px;
-  border-top: 1px solid #000;
-  border-left: 1px solid #000;
-  transition: transform .1s;
 
 }
 
