@@ -75,7 +75,7 @@ a {
 
 }
 
-.toggleBtn {
+.toBtn {
   position: absolute;
   display: block;
   top: 75%;
@@ -87,6 +87,32 @@ a {
   border-top: 1px solid #000;
   border-left: 1px solid #000;
   transition: transform .1s;
+
+}
+
+.toBtn.on {
+  position: absolute;
+  display: block;
+  top: 75%;
+  right: 37px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transform: translate(0, -50%) rotate(45deg);
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  transition: transform .1s;
+
+}
+
+.empty_box {
+  display: none;
+
+}
+
+.empty_box.on {
+  display: block;
+  height: 100px;
 
 }
 
