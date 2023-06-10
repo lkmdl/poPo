@@ -83,10 +83,10 @@ a {
   width: 16px;
   height: 16px;
   cursor: pointer;
-  transform: translate(0, -50%) rotate(225deg);
+  transform: rotate(225deg);
   border-top: 1px solid #000;
   border-left: 1px solid #000;
-  transition: transform .1s;
+  transition: transform .25s;
 
 }
 
@@ -98,23 +98,29 @@ a {
   width: 16px;
   height: 16px;
   cursor: pointer;
-  transform: translate(0, -50%) rotate(45deg);
   border-top: 1px solid #000;
   border-left: 1px solid #000;
-  transition: transform .1s;
+  transform: rotate(45deg);
+  transition: transform .25s;
 
 }
 
 .empty_box {
-  display: none;
+  overflow: hidden;
+  height: 0;
+  transition: all .25s ease;
+  
+}
 
+.empty_box > span {
+  margin: 0 auto;
 }
 
 .empty_box.on {
-  display: block;
   height: 100px;
 
 }
+
 
 /* ////////////////////////////////////////////////////////////// */
 
@@ -250,9 +256,7 @@ footer .nav-menu {
 }
 
 
-section {
-
-}
+section {}
 
 
 #section-banner {}
@@ -276,7 +280,6 @@ section {
 }
 
 .table {
-  margin-top: 42px;
   width: 100%;
   height: 50%;
   font-size: .5em;
