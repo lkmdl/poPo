@@ -16,7 +16,9 @@ ul,
 ol,
 h1,
 h2,
-h3 {
+h3,
+p,
+img {
   margin: 0;
   padding: 0;
 
@@ -297,6 +299,24 @@ footer .nav-menu {
 
 }
 
+#section-2 .text-gred img {
+  position: absolute;
+  top: 80;
+  width: 100%;
+  height: 65%;
+  opacity: .3;
+  
+}
+
+#section-2 img:nth-child(1) {
+  display: block;
+
+}
+
+#section-2 img:nth-child(2) {
+  display: none;
+
+}
 #section-2 .cont_head {
   display: flex;
   
@@ -322,14 +342,9 @@ footer .nav-menu {
 
 }
 
-#section-2 .head_alone {
+#section-2 .cont_head div {
   width: 50%;
   
-}
-
-#section-2 .head_team {
-  width: 50%;
-
 }
 
 #section-2 .cont_cont {
@@ -352,13 +367,17 @@ footer .nav-menu {
   
 }
 
-#section-2 img {
+.git_link {
   position: absolute;
-  top: -251px;
-  left: 45%;
-
+  top: 0;
+  left: 1%;
+  
 }
 
+.git_link img {
+  width: 61%;
+
+}
 
 
 /********************************************************/
