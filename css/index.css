@@ -255,10 +255,6 @@ footer .nav-menu {
 
 }
 
-
-section {}
-
-
 #section-banner {}
 
 #section-banner img {
@@ -270,12 +266,6 @@ section {}
 
 #section-1 {
   background-color: #fff;
-
-}
-
-
-#section-2 {
-  background-color: #f1f1f1;
 
 }
 
@@ -296,10 +286,45 @@ section {}
 
 }
 
+/********************************************************/
+
+#section-2 {
+  background-color: #f1f1f1;
+
+}
+
+#section-2 .cont_head {
+  display: flex;
+  
+}
+
+#section-2 .cont_head span {
+  background-color: aquamarine;
+  cursor: pointer;
+
+}
+
+.alone {
+  width: 50%;
+
+  
+}
+
+.accompanied {
+  width: 50%;
+
+}
+
+
+
+/********************************************************/
+
 #section-3 {
   background-color: #fff;
 
 }
+
+
 
 #section-4 {
   background-color: #f1f1f1;
