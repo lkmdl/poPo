@@ -22,6 +22,11 @@ h3 {
 
 }
 
+h2 {
+  font-size: 3em;
+
+}
+
 body * {
   /* outline: 1px dotted tomato; */
 
@@ -108,7 +113,7 @@ a {
 .empty_box {
   overflow: hidden;
   height: 0;
-  transition: all .25s ease;
+  transition: all 1s ease;
   
 }
 
@@ -117,7 +122,7 @@ a {
 }
 
 .empty_box.on {
-  height: calc(100% - 100px);
+  height: fit-content;
 
 }
 
@@ -299,6 +304,7 @@ footer .nav-menu {
 
 #section-2 .cont_head span {
   cursor: pointer;
+  font-size: 2em;
 
 }
 #section-2 .head_alone span:hover,
@@ -329,7 +335,6 @@ footer .nav-menu {
 
 #section-2 .cont-alone {
   display: block;
-
   
 }
 
@@ -362,6 +367,5 @@ footer .nav-menu {
 
 #section-4 img {
   width: 100%;
-  height: 100%;
 
 }
