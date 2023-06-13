@@ -332,16 +332,6 @@ footer .nav-menu {
 
 }
 
-#section-2 .head_alone span:hover {
-  text-decoration-line: underline;
-
-}
-
-#section-2 .head_team span:hover {
-  text-decoration-line: underline;
-
-}
-
 #section-2 .cont_head div {
   width: 50%;
   
@@ -366,19 +356,6 @@ footer .nav-menu {
   display: none;
   
 }
-
-.git_link {
-  position: absolute;
-  top: 0;
-  left: 1%;
-  
-}
-
-.git_link img {
-  width: 61%;
-
-}
-
 
 /********************************************************/
 
