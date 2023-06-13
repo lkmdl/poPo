@@ -307,7 +307,16 @@ footer .nav-menu {
   font-size: 2em;
 
 }
-#section-2 .head_alone span:hover,
+#section-2 .head_alone span {
+  text-decoration-line: underline;
+
+}
+
+#section-2 .head_alone span:hover {
+  text-decoration-line: underline;
+
+}
+
 #section-2 .head_team span:hover {
   text-decoration-line: underline;
 
@@ -345,8 +354,8 @@ footer .nav-menu {
 
 #section-2 img {
   position: absolute;
-  height: 100%;
-  right: 0;
+  top: -251px;
+  left: 45%;
 
 }
 

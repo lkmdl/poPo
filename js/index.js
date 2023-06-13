@@ -11,30 +11,27 @@ window.addEventListener("DOMContentLoaded", () => {
 
   }
 
-  const empty_box = document.querySelector('.empty_box');
   const toBtn = document.querySelector('.toBtn');
+  const empty_box = document.querySelector('.empty_box');
+
   toBtn.addEventListener('click', function () {
     toBtn.classList.toggle('on');
     empty_box.classList.toggle('on');
-
   });
 
-  const aloneBtn = document.querySelector(".head-alone");
-  const teamBtn = document.querySelector(".nead-team");
-  const aloneCont = document.querySelector(".cont-alone");
-  const teamCont = document.querySelector(".cont-team");
-  aloneBtn.addEventListener('click', function () {
-    console.log("a");
-  });
-  teamBtn
-  aloneCont
-  teamCont
-
-
-
-
-
-
+  $(".head_alone span").on("click", function () {
+    $(".head_alone span").css("text-decoration-line", "underline")
+    $(".head_team span").css("text-decoration-line", "none")
+    $(".cont-alone").css("display", "block");
+    $(".cont-team").css("display", "none");
+  })
+  
+  $(".head_team span").on("click", function () {
+    $(".head_team span").css("text-decoration-line", "underline")
+    $(".head_alone span").css("text-decoration-line", "none")
+    $(".cont-team").css("display", "block");
+    $(".cont-alone").css("display", "none");
+  })
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////
 });
