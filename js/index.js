@@ -29,14 +29,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   })
 
-  $(".cont a").hover(function () {
-    if( $(".cont a".attr("href")) > 0 ) {
-      $(".cont img").css("background-color","red");
-
-    }
-    
-  })
-
   $(".head_team span").on("click", function () {
     $("#section-2 > div > img:nth-child(1)").css("display", "none");
     $("#section-2 > div > img:nth-child(2)").css("display", "block");
