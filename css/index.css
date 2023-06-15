@@ -377,6 +377,7 @@ footer .nav-menu {
   display: flex;
   height: 33.33%;
   align-items: center;
+  justify-content: space-between;
   
 }
 
@@ -384,6 +385,17 @@ footer .nav-menu {
   display: flex;
   height: 33.33%;
   align-items: center;
+  justify-content: space-between;
+
+}
+
+#section-2 .cont .simbal_box {
+  height: 100%;
+
+}
+
+#section-2 .simbal_box a {
+  height: 100%;
 
 }
 
@@ -391,6 +403,7 @@ footer .nav-menu {
   height: 100%;
 
 }
+
 
 /********************************************************/
 
