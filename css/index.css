@@ -54,7 +54,6 @@ a {
 }
 
 .full-gred {
-  padding: 0 10%;
 
 }
 
@@ -119,13 +118,13 @@ a {
 
 }
 
-.empty_box>span {
+.empty_box > span {
   margin: 0 auto;
 
 }
 
 .empty_box.on {
-  height: calc(100vh - 90px);
+  height: calc(100vh - 300px);
 
 }
 
@@ -271,7 +270,7 @@ footer .nav-menu {
 
 #section-banner {}
 
-#section-banner img {
+#section-banner video {
   width: 100%;
   height: calc(100% - 220px);
 
@@ -305,48 +304,12 @@ footer .nav-menu {
 
 }
 
-#section-2 .text-gred img {
-  position: absolute;
-  top: 80;
-  width: 100%;
-  height: 65%;
-  opacity: .3;
-
-}
-
-#section-2 .text-gred img:nth-child(1) {
-  display: block;
-
-}
-
-#section-2 .text-gred img:nth-child(2) {
-  display: none;
-
-}
-
 #section-2 .cont_head {
-  display: flex;
+  height: 15%;
 
 }
 
-#section-2 .cont_head span {
-  cursor: pointer;
-  font-size: 2em;
-
-}
-
-#section-2 .head_alone span {
-  text-decoration-line: underline;
-
-}
-
-#section-2 .cont_head div {
-  width: 50%;
-
-}
-
-#section-2 .cont-alone div:hover,
-#section-2 .cont-team div:hover {
+#section-2 .cont-a div:hover {
   background-color: rgb(155 192 227);
 
 }
@@ -357,40 +320,20 @@ footer .nav-menu {
 }
 
 #section-2 .cont_cont {
-  height: calc(100% - 95.45px);
+  height: 85%;
 
 }
 
-#section-2 .cont-alone {
-  height: 100%;
-  display: block;
-
-}
-
-#section-2 .cont-team {
-  height: 100%;
-  display: none;
-
-}
-
-#section-2 .cont-alone div {
+#section-2 .cont-a div {
   display: flex;
-  height: 33.33%;
+  height: 25%;
   align-items: center;
   justify-content: space-between;
   
 }
 
-#section-2 .cont-team div {
-  display: flex;
-  height: 33.33%;
-  align-items: center;
-  justify-content: space-between;
-
-}
-
 #section-2 .cont .simbal_box {
-  height: 100%;
+  height: 80%;
 
 }
 
@@ -420,5 +363,6 @@ footer .nav-menu {
 
 #section-4 img {
   width: 100%;
+  height: 100%;
 
 }
