@@ -116,10 +116,10 @@ a {
   overflow: hidden;
   height: 0;
   transition: all 1s ease;
-  
+
 }
 
-.empty_box > span {
+.empty_box>span {
   margin: 0 auto;
 
 }
@@ -263,7 +263,7 @@ footer .nav-menu {
 
 }
 
-#section-1, 
+#section-1,
 #section-2 {
   height: 100vh;
 
@@ -291,7 +291,6 @@ footer .nav-menu {
 
 .table td {
   width: 25%;
-  padding: 2.5% 2%;
   font-size: 1em;
   border-bottom: .5px dotted #000;
   text-align: center;
@@ -312,7 +311,7 @@ footer .nav-menu {
   width: 100%;
   height: 65%;
   opacity: .3;
-  
+
 }
 
 #section-2 .text-gred img:nth-child(1) {
@@ -324,9 +323,10 @@ footer .nav-menu {
   display: none;
 
 }
+
 #section-2 .cont_head {
   display: flex;
-  
+
 }
 
 #section-2 .cont_head span {
@@ -334,6 +334,7 @@ footer .nav-menu {
   font-size: 2em;
 
 }
+
 #section-2 .head_alone span {
   text-decoration-line: underline;
 
@@ -341,36 +342,52 @@ footer .nav-menu {
 
 #section-2 .cont_head div {
   width: 50%;
-  
+
+}
+
+#section-2 .cont-alone div:hover,
+#section-2 .cont-team div:hover {
+  background-color: rgb(155 192 227);
+
+}
+
+#section-2 .cont {
+  height: calc(100% - 244.55px);
+
 }
 
 #section-2 .cont_cont {
-  
-}
+  height: calc(100% - 95.45px);
 
-#section-2 .cont-alone div:hover, 
-#section-2 .cont-team div:hover {
-  background-color: rgb(155 192 227);
-  
 }
 
 #section-2 .cont-alone {
+  height: 100%;
   display: block;
-  
+
 }
 
 #section-2 .cont-team {
+  height: 100%;
   display: none;
+
+}
+
+#section-2 .cont-alone div {
+  display: flex;
+  height: 33.33%;
+  align-items: center;
   
 }
 
-#section-2 .cont_alone div {
-  position: absolute;
+#section-2 .cont-team div {
+  display: flex;
+  height: 33.33%;
+  align-items: center;
 
 }
 
-#section-2 .cont_alone div img {
-  width: 100%;
+#section-2 .cont_cont img {
   height: 100%;
 
 }
@@ -385,7 +402,7 @@ footer .nav-menu {
 
 #section-4 {
   background-color: #f1f1f1;
-  
+
 }
 
 #section-4 img {
