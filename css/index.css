@@ -53,9 +53,7 @@ a {
 
 }
 
-.full-gred {
-
-}
+.full-gred {}
 
 .text-gred {
   padding: 90 0 0 0;
@@ -118,7 +116,7 @@ a {
 
 }
 
-.empty_box > span {
+.empty_box>span {
   margin: 0 auto;
 
 }
@@ -268,7 +266,10 @@ footer .nav-menu {
 
 }
 
-#section-banner {}
+#section-banner-box {
+  width: 100%;
+
+}
 
 #section-banner video {
   width: 100%;
@@ -329,7 +330,7 @@ footer .nav-menu {
   height: 25%;
   align-items: center;
   justify-content: space-between;
-  
+
 }
 
 #section-2 .cont .simbal_box {
