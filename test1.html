@@ -4,97 +4,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>Rolling Gallery</title>
     <style>
-        *:before,
-        *:after {
-            content: '';
-            position: absolute;
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            /* 보이는 화면 기준 채우기! */
         }
 
-        .toggle {
+        body {
+            background: url(./images/space.jpg) no-repeat center/auto 200%;
+        }
+
+        /* 공통 */
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        /* 갤러리부모박스 */
+        #wrap {
             position: relative;
+            /* 부모자격 - #mini */
+            width: 520px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 20px;
+            /* outline: 2px dotted red; */
+        }
+
+        /* 메인이미지박스 */
+        #mbox {
             display: inline-block;
+            /* 한줄에 오도록 변경 */
         }
 
-        input {
-            height: 40px;
-            left: 0;
-            opacity: 0;
-            position: absolute;
-            top: 0;
-            width: 40px;
+        #mbox img {
+            vertical-align: -79px;
         }
 
-        .normal label {
-            background: #af4c4c;
-            border: 0.5px solid rgba(117, 117, 117, 0.31);
-            box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2), 0 -3px 4px rgba(0, 0, 0, 0.15);
-        }
-
-        #normal:checked+label:before {
-            left: 67px;
-        }
-
-        #normal:checked+label {
-            background: #c00032;
-        }
-
-        .normal label:before {
-            border: none;
-            width: 2.5em;
-            height: 2.5em;
-            box-shadow: inset 0.5px -1px 1px rgba(0, 0, 0, 0.35);
-            background: #fff;
-            transform: rotate(-25deg);
-        }
-
-        .normal label:after {
-            background: transparent;
-            height: calc(100% + 8px);
-            border-radius: 30px;
-            top: -5px;
-            width: calc(100% + 8px);
-            left: -4px;
-            z-index: 0;
-            box-shadow: inset 0px 2px 4px -2px rgba(0, 0, 0, 0.2), 0px 1px 2px 0px rgba(151, 151, 151, 0.2);
-        }
-
-        label.toggle-item {
-            width: 7em;
-            background: #2e394d;
-            height: 3em;
-            display: inline-block;
-            border-radius: 50px;
-            margin: 40px;
-            position: relative;
-            transition: all .3s ease;
-            transform-origin: 20% center;
-            cursor: pointer;
-        }
-
-        label.toggle-item:before {
-            display: block;
-            transition: all .2s ease;
-            width: 2.3em;
-            height: 2.3em;
-            top: .25em;
-            left: .25em;
-            border-radius: 2em;
-            border: 2px solid #88cf8f;
-            transition: .3s ease;
+        /* 이미지 텍스트 출력박스 */
+        .imgtxt {
+            text-align: center;
+            color: red;
+            text-shadow: 1px 1px 1px #777;
         }
     </style>
+
+    <!-- JS 코딩구역 -->
+    <script>
+        ///////// 전역변수 구역 ///////////////////
+
+        // 1. 이미지번호 변수
+        let inum = 1; // 첫번째 이미지번호를 기억시킨다!
+
+        // 2. 이미지설명 배열변수
+        let itxt = [
+            "노랑잉꼬가 먹이를 꼭꼭 찍어먹어요~",
+            "분홍장미가 머리칼을 너풀너풀 날려요~",
+            "백조같은 거위가 뚱하니 바라보아요~",
+            "바이킹이 너무 어지러워 토가 나와요~",
+            "눈사람이 가짜인데 진짜같아 보여요~",
+            "이 양은 보통양이 아니고 복제양 돌리예요~",
+            "잉꼬 한쌍이 영화를 찍어요~"
+
+        ];
+
+        // 3. 이미지설명 글자색 배열변수
+        let tcolor = ["red", "orange", "yellow", "green",
+            "blue", "navy", "purple"
+        ];
+
+
+
+        //////////////// 로드구역 ////////////
+        window.addEventListener("load", () => {
+
+            console.log("로드완료!");
+
+            // 0. 대상선정 //////////////////////////////
+            // 버튼대상: .btn
+            let btn = document.querySelectorAll(".btn");
+            // console.log("버튼개수:"+btn.length);
+
+            // 중앙이미지: #mbox img
+            let mimg = document.querySelector("#mbox img");
+            // console.log("이미지설명:"+mimg.alt);
+
+            // 글자출력박스: .imgtxt
+            let imgtxt = document.querySelector(".imgtxt");
+            // console.log("이미지텍스트:"+imgtxt.innerText);
+
+
+            // 1. 오른쪽버튼 클릭시 다음 이미지변경하기
+            // btn[1] -> 두번째 순번 버튼 - 오른쪽버튼
+            btn[1].onclick = () => chgImg(1);
+            // 이미지 변경함수 호출시 전달값 1을 보냄
+
+            // 2. 왼쪽버튼 클릭시 이전 이미지변경하기
+            // btn[0] -> 첫번째 순번 버튼 - 왼쪽버튼
+            btn[0].onclick = () => chgImg(0);
+            // 이미지 변경함수 호출시 전달값 0을 보냄
+
+            /************************************ 
+                함수명: chgImg
+                기능: 이미지 및 이미지설명 변경
+            ************************************/
+            const chgImg = dir => { // dir - 방향전달값변수
+
+                // 1. 함수호출확인
+                // console.log("이미지바꿔!!"+dir);
+
+
+                // 2. 대상선정: #mbox img -> mimg 변수
+
+                // 3. 변경내용: 이전/다음 이미지로 변경함
+                if (dir) { /// 오른쪽버튼 : 다음이미지
+                    // dir이 1일 경우 true와 같음!
+
+                    // -> 이미지번호를 1씩증가함!
+                    inum++;
+                    // -> 이미지 한계수 체크
+                    if (inum === 8) inum = 1;
+                    // 첫이미지로!
+
+                } ////// if ///////
+                else { /// 왼쪽버튼 : 이전이미지
+
+                    // -> 이미지번호를 1씩감소함!
+                    inum--;
+                    // -> 이미지 한계수 체크
+                    if (inum === 0) inum = 7;
+                    // 마지막이미지로!
+
+                } ////// else if /////
+
+                console.log("이미지번호:" + inum);
+
+                // 4. 이미지 변경하기
+                mimg.src = `./images/img${inum}.jpg`;
+
+                // 5. 이미지설명 배열에서 읽어와서 넣기
+                // 배열번호는 이미지번호-1
+                imgtxt.innerText = itxt[inum - 1];
+                // 이미지설명박스 = 이미지설명배열[순번]
+
+                // 6. 이미지설명 글자색 배열순번으로 변경하기
+                imgtxt.style.color = tcolor[inum - 1];
+                // 이미지설명박스CSS = 글자색배열[순번]
+
+            }; //////////// chgImg 함수 /////////////
+            ///////////////////////////////////////// 
+
+            /***************************************** 
+                [ JS 타이밍 함수 : Timing Function ]
+
+                1. setInterval(함수,시간)
+                - 일정시간 간격으로 함수를 호출!
+                - 시간은 1/1000초임, 단위없음(예:1000->1초)
+                -> 인터발함수를 지울때는 변수에 담고
+                    아래 함수를 호출한다!
+                    -> clearInterval(변수)
+                ___________________________________
+
+                2. setTimeout(함수,시간)
+                - 일정시간 후 한번만 함수를 호출함!
+                - 시간: 1/1000초, 단위없음
+                -> 타임아웃함수를 지울때는 변수에 담고
+                    아래 함수를 호출한다!
+                    -> clearTimeout(변수)
+
+
+
+                    [ JS 클래스 관련 내장함수 ]
+                    classList
+                    -> 클래스를 요소에 넣거나 빼기위한 객체
+                    ((관련매서드))
+                    1. add(클래스명) : 클래스추가
+                    2. remove(클래스명) : 클래스제거
+                    3. toggle(클래스명) : 클래스 추가/제거
+                    
+            *****************************************/
+        }); //////// 로드구역 /////////////////
+        ///////////////////////////////////////
+    </script>
 </head>
 
 <body>
-    <div class="toggle-wrapper">
-        <div class="toggle normal">
-            <input id="normal" type="checkbox" />
-            <label class="toggle-item" for="normal"></label>
+    <!-- 갤러리 부모박스 -->
+    <div id="wrap">
+        <!-- 타이틀 -->
+        <h1>Rolling Gallery</h1>
+        <!-- 왼쪽이동버튼 -->
+        <a href="#" class="btn lb">
+            <img src="./images/left_btn.png" alt="왼쪽버튼">
+        </a>
+        <!-- 메인이미지박스 -->
+        <div id="mbox">
+            <img src="./images/img1.jpg" alt="메인이미지">
         </div>
-    </div>
+        <!-- 오른쪽이동버튼 -->
+        <a href="#" class="btn rb">
+            <img src="./images/right_btn.png" alt="오른쪽버튼">
+        </a>
 
+        <!-- 이미지별 설명 텍스트 출력박스 -->
+        <h2 class="imgtxt">
+            노랑잉꼬가 먹이를 꼭꼭 찍어먹어요~
+        </h2>
 </body>
 
 </html>
