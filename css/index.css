@@ -53,7 +53,9 @@ a {
 
 }
 
-.full-gred {}
+.full-gred {
+
+}
 
 .text-gred {
   padding: 90 0 0 0;
@@ -117,7 +119,7 @@ a {
 }
 
 .Folding_box > span {
-  margin: 0 auto;
+  margin: 0 50px;
   
 }
 
@@ -267,11 +269,15 @@ footer .nav-menu {
 
 }
 
+
+
+/********************************************************/
 #section-banner .banner-box {
   width: 100%;
   height: calc(100% - 233.64px);
 
 }
+
 
 #section-banner video {
   width: 100%;
@@ -279,19 +285,20 @@ footer .nav-menu {
 
 }
 
+/********************************************************/
 
 #section-1 {
   background-color: #fff;
 
 }
 
-.table {
+#section-1 .table {
   width: 100%;
   height: 40%;
 
 }
 
-.table td {
+#section-1 .table td {
   width: 25%;
   font-size: 1em;
   border-bottom: .5px dotted #000;
@@ -370,10 +377,24 @@ footer .nav-menu {
 
 }
 
-#section-3 .Folding_box .cont div {  
+/* 
+#section-3 .Folding_box .cont > div {  
   height: 100%;
 
 }
+*/
+
+#section-3 .conect_info {
+  height: fit-content;
+
+}
+
+
+#section-3 .conect_info span {
+  display: block;
+
+}
+
 
 /********************************************************/
 
@@ -385,10 +406,5 @@ footer .nav-menu {
 #section-4 img {
   width: 100%;
   height: 100%;
-
-}
-
-#section-4 .empty_box.on {
-  height: calc(100vh - 300px);
 
 }
