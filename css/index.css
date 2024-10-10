@@ -90,9 +90,9 @@ a {
   position: absolute;
   display: block;
   top: 60%;
-  right: 37px;
-  width: 30px;
-  height: 30px;
+  right: 60px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   transform: rotate(225deg);
   border-top: 1px solid #000;
@@ -269,9 +269,16 @@ footer .nav-menu {
 
 }
 
+section:nth-child(even) {
+  background-color: #f1f1f1;
+
+}
+
 .cont {
   height: 100%;
 }
+
+
 
 
 /***************************banner*****************************/
@@ -282,11 +289,6 @@ footer .nav-menu {
 }
 
 /*****************************s1***************************/
-
-#section-1 {
-  background-color: #fff;
-
-}
 
 #section-1 .table {
   width: 100%;
@@ -304,11 +306,6 @@ footer .nav-menu {
 }
 
 /****************************s2****************************/
-
-#section-2 {
-  background-color: #f1f1f1;
-
-}
 
 #section-2 .cont-a div:hover {
   background-color: rgb(155 192 227);
@@ -340,11 +337,6 @@ footer .nav-menu {
 
 
 /***************************s3*****************************/
-
-#section-3 {
-
-  background-color: #f1f1f1;
-}
 
 #section-3 .Folding_box .cont {
   height: 100%;
