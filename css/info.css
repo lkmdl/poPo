@@ -1,0 +1,379 @@
+@charset "utf-8";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5em;
+  scroll-behavior: smooth;
+
+}
+
+a,
+ul,
+ol,
+h1,
+h2,
+h3,
+p,
+img {
+  margin: 0;
+  padding: 0;
+
+}
+
+h2 {
+  font-size: 3em;
+
+}
+
+/* 
+body * {
+  outline: 1px dotted tomato;
+
+}
+*/
+
+
+ol,
+ul {
+  list-style: none;
+
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+
+}
+
+.inner-gred {
+  margin: 0 10%;
+
+}
+
+/* 
+.full-gred {
+
+}
+*/
+
+.text-gred {
+  padding: 90 0 0 0;
+
+}
+
+.text-sub-gred {
+  width: 100%;
+  display: block;
+  font-size: .6em;
+
+}
+
+.solid {
+  margin-top: 10px;
+  display: block;
+  border-bottom: 1px solid #000;
+
+}
+
+.rel {
+  position: relative;
+
+}
+
+.toBtn {
+  position: absolute;
+  display: block;
+  top: 60%;
+  right: 60px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transform: rotate(225deg);
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  transition: transform .25s;
+
+}
+
+.toBtn.on {
+  /* position: absolute;
+  display: block;
+  top: 75%;
+  right: 37px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  transition: transform .25s; */
+  transform: rotate(45deg);
+
+}
+
+.Folding_box {
+  overflow: hidden;
+  height: 0px;
+  transition: all 1s ease;
+  
+}
+
+.Folding_box > span {
+  margin: 0 50px;
+  
+}
+
+.Folding_box.on {
+  height:
+  /* 50vh; */
+  calc(100vh - 244.55px);
+
+}
+
+
+/* ////////////////////////////////////////////////////////////// */
+
+.header_wrap {
+  position: fixed;
+  width: calc(100% - 100px);
+  height: 90px;
+  font-size: 18px;
+  padding: 0 50px;
+  background-color: #fff;
+  z-index: 99999;
+
+}
+
+.header-container {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.nav-container {
+  width: 38.5%;
+  height: 30%;
+  display: flex;
+
+}
+
+.nav-widget {
+  width: 23.5%;
+  display: flex;
+
+}
+
+.logo {
+  width: 50%;
+  display: block;
+
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+header nav {
+  width: 100%;
+  margin-left: 30px;
+
+}
+
+header .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.nav-menu a:hover {
+  text-decoration: underline 2px;
+  color: black;
+
+
+}
+
+.widget-hash {
+  display: flex;
+
+}
+
+.hash-rolling-wrap {
+  height: 24px;
+  overflow: hidden;
+}
+
+.rolling-list {
+  position: relative;
+  top: 0px;
+  height: 100%;
+  font-size: 2em;
+  font-weight: bolder;
+  animation: rollingNav 10s linear infinite;
+
+}
+
+@keyframes rollingNav {
+  to {
+    top: -800%;
+
+  }
+}
+
+.footer_wrap {
+  display: flex;
+  padding: 0 50px;
+  width: calc(100% - 100px);
+  height: 61px;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+footer nav {
+  width: 20%;
+}
+
+footer .nav-menu {
+  width: 100%;
+  display: flex;
+  font-size: .4em;
+  font-weight: 550;
+  justify-content: space-between;
+
+}
+
+.info {
+  width: 35%;
+  display: flex;
+  font-size: .4em;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+/****************************공통****************************/
+
+#container {
+  padding-top: 90px;
+
+}
+
+section:nth-child(even) {
+  background-color: #f1f1f1;
+
+}
+
+.cont {
+  height: 100%;
+}
+
+
+
+
+/***************************banner*****************************/
+#section-banner .banner-box {
+  width: 100%;
+  height: calc(100% - 233.64px);
+
+}
+
+/****************************s1****************************/
+
+#section-1 .cont-a div:hover {
+  background-color: rgb(155 192 227);
+
+}
+
+#section-1 .cont-a div {
+  display: flex;
+  height: 25%;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+#section-1 .cont .simbal_box {
+  height: 80%;
+
+}
+
+#section-1 .simbal_box a {
+  height: 100%;
+
+}
+
+#section-1 .cont img {
+  height: 100%;
+
+}
+
+
+/***************************s2*****************************/
+
+#section-2 .Folding_box .cont {
+  height: 100%;
+  display: flex;
+  align-items: center
+  
+}
+
+
+#section-2 .Folding_box .cont img {
+  height: 100%;
+
+}
+
+
+#section-2 .conect_info {
+  height: fit-content;
+
+}
+
+
+#section-2 .conect_info span {
+  display: block;
+
+}
+
+/*****************************s3***************************/
+
+#section-3 .table {
+  width: 100%;
+  height: 100%;
+
+}
+
+#section-3 .table td {
+  width: 25%;
+  font-size: 1em;
+  border-bottom: .5px dotted #000;
+  text-align: center;
+
+
+}
+
+
+/***************************s4*****************************/
+
+#section-4 {
+  background-color: #fff;
+  height: fit-content;
+
+}
+
+#section-4 img {
+  width: 100%;
+  height: 100%;
+
+}
