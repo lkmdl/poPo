@@ -1,4 +1,9 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
+/* https://fonts.google.com/specimen/Festive?preview.text=j&preview.size=140&preview.text_type=custom */
+/* font-family: 'Festive', cursive; */
+
+
 
 html,
 body {
@@ -12,10 +17,10 @@ body {
     /* 스크롤숨김(스크롤안됨!) */
 }
 
-body * {
+/* body * {
     outline : 3px dotted red;
 
-}
+} */
 
 /* 공통셋팅 */
 a {
@@ -57,20 +62,9 @@ h3 {
 
 /* 페이지 최상위 부모박스 */
 .wrap {
-    /* width: 700vw; */
+    width: 700vw;
     /* 보이는 화면의 7개 */
-    /* height: 100vh; */
-    width: 700%;
-    height: 100%;
     display: flex;
-    /* background-image: linear-gradient(to right,
-            rgba(255, 0, 0, 0.3),
-            rgba(255, 166, 0, 0.3),
-            rgba(255, 255, 0, 0.3),
-            rgba(0, 128, 0, 0.3),
-            rgba(0, 0, 255, 0.3),
-            rgba(0, 0, 128, 0.3),
-            rgba(128, 0, 128, 0.3)); */
 
 }
 
@@ -81,7 +75,8 @@ h3 {
     flex: 1;
     /* width, height 크기설정 불필요 */
     /* 한페이지 보이는 화면 채우기 */
-
+    /* width: 100%; */
+    /* height: 100%; */
     /* 
                 width: 100vw;
                 height: 100vh;
@@ -93,7 +88,7 @@ h3 {
                 데스트탑에서는 100%를 사용하는게 좋다!
                 (이유는 가로스크롤바가 생기게 되므로!)
              */
-    z-index: -1;
+    /* z-index: -1; */
 
 }
 
@@ -121,7 +116,7 @@ h3 {
     width: 100%;
     z-index: 9999;
     /* 맨위! */
-    background-color: rgba(0, 0, 0, .7);
+
 }
 
 /* 상단영역 속박스 */
@@ -129,21 +124,6 @@ h3 {
     position: relative;
     /* 부모자격 */
     height: 80px;
-}
-
-/* 1-1.로고 */
-#logo {
-    width: 250px;
-    height: 100%;
-    text-align: center;
-    overflow: hidden;
-
-}
-
-#logo a {
-    font-weight: normal;
-    font-size: 3em;
-
 }
 
 /* 1-2. GNB 메뉴 */
@@ -173,20 +153,39 @@ h3 {
 
 /* 2. 페이지영역 */
 /* 개별 페이지 셋팅 */
-#pg1 {
-    background:url("../img/pg1.png") no-repeat center/cover;    
-    
-}
+/* #pg1 {} */
 
-/* 
-#pg2 { }
-#pg3 { }
-#pg4 { }
-#pg5 { }
-#pg6 { }
-#pg7 { }*/
+#pg2 { 
+    background-color: rgba(153, 0, 0, 0.852);
+ }
+#pg3 {
+    background-color: rgba(153, 0, 0, 0.710);
+
+  }
+#pg4 {
+    background-color: rgba(153, 0, 0, 0.568);
+
+ }
+#pg5 {
+    background-color: rgba(153, 0, 0, 0.426);
+
+ }
+#pg6 {
+    background-color: rgba(153, 0, 0, 0.284);
+
+ }
+#pg7 {
+    background-color: rgba(153, 0, 0, 0.142);
+
+ }
 .cont {
     height: 100%;
+
+}
+
+.box1:hover {
+    background-color: red;
+    cursor: pointer;
 
 }
 
@@ -229,9 +228,9 @@ h3 {
 
 }
 
+
 /* 설명글자숨기기 */
 .indic span {
     display: none;
-
 }
 
