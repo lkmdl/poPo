@@ -1,0 +1,264 @@
+@charset "utf-8";
+@import url(./pg1_common.css);
+@import url(./nav.css);
+
+body {
+    background-color: #cdc6be;
+}
+
+/******************************** manu  ******************************* */
+
+#top.on .nav :nth-child(1) {
+    text-decoration: line-through tomato;
+    filter: brightness(50%);
+}
+
+#top.on .nav :nth-child(2):hover {
+    text-decoration: line-through tomato;
+    filter: drop-shadow(2px 4px 6px black);
+    transition: text-decoration .5s ease-in;
+}
+
+#top.on .nav :nth-child(3):hover {
+    text-decoration: line-through tomato;
+    filter: drop-shadow(2px 4px 6px black);
+    transition: text-decoration .5s ease-in;
+}
+
+/********************************** 컨텐츠 영역 **********************************/
+
+
+#cont {
+    padding-top: 150px;
+}
+
+/********************** bar1 **********************/
+.bar1 {
+    padding: 0 0 5vh 0;
+
+}
+
+.bar1>h1 {
+    height: 100%;
+    font-size: 18vw;
+    color: #cdc6be;
+    text-align-last: left;
+    background-color: #1d1d1b;
+}
+
+/************************************* ibx2 *************************************/
+.ibx2>div {
+    height: 45vw;
+
+}
+
+
+.ibx2>div:nth-child(1) {
+    width: 30.5%;
+    padding-right: 3vw;
+
+}
+
+.bx2 h4 {
+    font-size: 4vw;
+    line-height: 1;
+}
+
+.ibx2>div:nth-child(2) {
+    width: 64.5vw;
+    padding-left: 3.5vw;
+
+}
+
+div.ibx2 .img1 {
+    background: url(../img/pg1/blueJk1.jpg) center no-repeat;
+    background-size: 100% 100%;
+    height: 78%;
+
+}
+
+div.ibx2 .img1:hover {
+    background: url(../img/pg1/blueJk2.jpg) center no-repeat;
+    background-size: 100% 100%;
+    height: 78%;
+}
+
+div.ibx2 .img2 {
+    height: 77%;
+    background: url(../img/pg1/night.png) no-repeat;
+    background-size: 100% 100%;
+
+}
+
+/********************** bar2 **********************/
+
+.bar2 h1 {
+    width: 70%;
+    font-size: 10vw;
+    color: #cdc6be;
+    background-color: #1d1d1b;
+
+}
+
+.bar2 h1:hover {
+    width: 70%;
+    font-size: 10vw;
+    color: #1d1d1b;
+    background: url(../img/pg1/invertEye.jpg) no-repeat center;
+    background-size: 100% 100%;
+}
+
+.bar2 div.img {
+    margin: 2vw 0 2vw 5vw;
+    width: 20%;
+    background: url(../img/pg1/Sunflower.png) center no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.bx2>h2,h4 {
+    font-size: 1.48vw;
+    line-height: 1.5;
+    color: #1d1d1b;
+}
+
+/************************************* ibx3 *************************************/
+.ibx3 {
+    margin: 3vw 0;
+
+}
+
+/********************** ibx left **********************/
+.left {
+    width: 65.5%;
+    height: 30vh;
+
+}
+
+.left {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.left>.box {
+    padding-left: 3vw;
+    width: 40%;
+    height: 30vh;
+
+}
+
+.left .img1 {
+    width: 100%;
+    height: 60%;
+    background: url(../img/pg1/2in1.jpg) no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.left .img1:hover {
+    transform: scale(2);
+}
+
+.left>.img2 {
+    width: 97%;
+    height: 200%;
+    background: url(../img/pg1/bed1.jpg) no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.left>.img2:hover {
+    background: url(../img/pg1/bed2.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.bx3 {
+    width: 41%;
+    height: 100%;
+    margin-bottom: 3vw;
+    color: #1d1d1b;
+
+}
+
+.bx3 :nth-child(1) {
+    width: 100%;
+    height: 35%;
+    line-height: 2;
+    font-size: 3.8vw;
+}
+
+.bx3 :nth-child(2) {
+    width: 100%;
+    height: 35%;
+    line-height: 1.5;
+    font-size: 4.5vw;
+
+}
+
+.bx3 :nth-child(3) {
+    height: 30%;
+    line-height: 1;
+    font-size: 5vw;
+}
+
+.box :nth-child(2) {
+    height: 20%;
+    font-size: 2vw;
+    line-height: 2;
+    text-align: center;
+    color: #cdc6be;
+    background-color: #1d1d1b;
+
+}
+
+.box :nth-child(3) {
+    height: 20%;
+    font-size: 2vw;
+    line-height: 2;
+    text-align: center;
+    color: #cdc6be;
+    background-color: #1d1d1b;
+    text-decoration: 7px line-through red;
+
+}
+
+/********************** ibx right **********************/
+.right {
+    position: relative;
+    width: 25.5%;
+    height: 100vh;
+    padding-left: 3vw;
+
+}
+
+.text {
+    position: absolute;
+    left: -40%;
+    font-size: 1.8vw;
+    color: #1d1d1b;
+    transform: rotate(280deg);
+}
+
+.mbx {
+    position: relative;
+    left: 5px;
+    width: 200%;
+    font-size: 6vw;
+    color: #1d1d1b;
+    line-height: 8vw;
+    overflow: hidden;
+    animation: leftGo 5s linear infinite;
+}
+
+@keyframes leftGo {
+    to {
+        left: -100%;
+    }
+}
+
+.mbx :nth-child(even) {
+    margin: 0 0 0 5px;
+    color: #cdc6be;
+    background-color: #1d1d1b;
+}

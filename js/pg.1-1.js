@@ -5,26 +5,18 @@ window.addEventListener("DOMContentLoaded",()=>{
 
   /******************************************************
    ******************************************************/
- let enter = document.querySelector(".go");
+ let top = document.querySelector("#top");
+ let menu = document.querySelector(".menu");
  /******************************************************
   ******************************************************/
-  enter.onclick =
-  ()=>{
-    location.href = "../html/pg1-1.html";
-    
-  }
 
-  $(".go").hover(function(){
-    $(".bg")
-    .toggleClass('smile')
-    // .css
-    // ("background", "url('../img/join2.png')");
-  });
+  // menu click //
+  menu.onclick = ()=>{
+    // console.log("click click click");
+    top.classList.toggle("on");    
+  }; // menu click //
+  
 
-  // $(".go").mouseout(function(){
-  //   $(".bg")
-  //   .toggleClass('on')
-  // });
 
 });////////////////////////////////////////////////// loading area
 //////////////////////////////////////////////////////////////////
