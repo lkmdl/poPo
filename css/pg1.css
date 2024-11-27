@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import url(../css/pg1_common.css);
 
-.bg {
+#pg1 .bg {
   height: 100vh;
   background: url(../img/pg1/join1.png) center/cover no-repeat;
   background-color: #cdc6be;
@@ -9,12 +9,12 @@
 
 }
 
-.smile {
+#pg1 .smile {
   background: url(../img/pg1/join2.png) center/cover no-repeat;
 
 }
 
-.effect {
+#pg1 .effect {
   position: relative;
   top: 65%;
   width: 100%;
@@ -23,6 +23,7 @@
   z-index: 5;
 }
 
+#pg1
 .cbg0,
 .cbg1,
 .cbg2,
@@ -42,60 +43,60 @@
   z-index: 2;
 }
 
-.cbg0 {
+#pg1 .cbg0 {
   top: 5px;
 }
 
-.cbg1 {
+#pg1 .cbg1 {
   top: 10px;
 }
 
-.cbg2 {
+#pg1 .cbg2 {
   top: 15px;
 }
 
-.cbg3 {
+#pg1 .cbg3 {
   top: 20px;
 }
 
-.cbg4 {
+#pg1 .cbg4 {
   top: 25px;
 }
 
-.cbg5 {
+#pg1 .cbg5 {
   top: 30px;
 }
 
-.cbg6 {
+#pg1 .cbg6 {
   top: 35px;
 }
 
-.cbg7 {
+#pg1 .cbg7 {
   top: 40px;
 }
 
-.cbg8 {
+#pg1 .cbg8 {
   top: 45px;
 }
 
-.cbg9 {
+#pg1 .cbg9 {
   top: 50px;
 }
 
-.cbg10 {
+#pg1 .cbg10 {
   top: 55px;
 }
 
-.cbg11 {
+#pg1 .cbg11 {
   top: 65px;
 }
 
-.cbox {
+#pg1 .cbox {
   z-index: 1;
   
 }
 
-.halfD {
+#pg1 .halfD {
   position: absolute;
   top: 105px;
   width: 100%;
@@ -107,7 +108,7 @@
 
 }
 
-.tit {
+#pg1 .tit {
   position: absolute;
   top: 100%;
   left: 30%;
@@ -128,7 +129,7 @@
 
 }
 
-.enter > h3 {
+#pg1 .enter > h3 {
   position: absolute;
   top: 50%;
   left: 60%;
@@ -140,7 +141,7 @@
 }
 
 
-.ddddox {
+#pg1 .ddddox {
   position: absolute;
   bottom: -132%;
   background-color: #cdc6be;
