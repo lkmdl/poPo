@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded",()=>{
   ******************************************************/
   enter.onclick =
   ()=>{
-    location.href = "./html/pg1-1.html";
+    location.href = "/html/pg1-1.html";
     
   }
 
