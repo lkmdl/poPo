@@ -151,20 +151,7 @@ h3 {
 /* #pg1 {} */
 
 /* #pg2 {} */
-#pg2 #cont {
-    height: 100vh;
-}
 
-#pg2 .cont {
-    height: 100vh;
-    
-}
-
-#pg2 .bg {
-    background-color: #000;
-    height: 100vh;
-
-}
 
 
 #pg3 {

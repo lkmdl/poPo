@@ -1,17 +1,29 @@
 @charset "utf-8";
-body * {
- outline: 2px dotted red;
-}
 
 body * {
-  outline: 1px dotted tomato;
+  /* outline: 1px dotted tomato; */
+
+}
+
+#pg2 #cont {
+  height: 100vh;
+}
+
+#pg2 .cont {
+  height: 100vh;
+  
+}
+
+#pg2 .bg {
+  background-color: #000;
+  height: 100vh;
 
 }
 
 #aSide model-viewer {
   position: absolute;
   top: 0;
-  left: 0;
+  left: calc(50% - 500px);
   width: 1000px;
   height: 1000px;
   border: none;
