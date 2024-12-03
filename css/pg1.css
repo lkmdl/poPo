@@ -1,19 +1,6 @@
 @charset "utf-8";
 @import url(../css/pg1_common.css);
-html::after{
-	/* 소스만 다운받고 화면은 나태내지 않는다. (숨김 처리) */
-    position:absolute; 
-    width:0; 
-    height:0; 
-    overflow:hidden; 
-    z-index:-1;
-    
-    /* load images */
-    content:
-    url(../img/pg1/join1.png)
-    url(../img/pg1/join2.png);
-     /* 필요한 이미지 소스들 다운 */
-}
+
 
 #pg1 .bg {
   height: 100vh;
