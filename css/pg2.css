@@ -1,0 +1,19 @@
+@charset "utf-8";
+body * {
+ outline: 2px dotted red;
+}
+
+body * {
+  outline: 1px dotted tomato;
+
+}
+
+#aSide model-viewer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 600px;
+  width: 600px;
+  border: none;
+  
+}
