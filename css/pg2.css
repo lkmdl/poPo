@@ -6,11 +6,20 @@
 
 #pg2 .cont {
   height: 100vh;
-  
+
 }
 
 #pg2 .bg {
-  background-color: #000;
+  /* background-color: #000;
+   */
+  background-image: linear-gradient(to bottom,
+      rgba(128, 128, 128, 0.644),
+      rgba(128, 128, 128, 0.959),
+      rgba(0, 0, 0, 0.938),
+      black,
+      rgba(128, 128, 128, 0.925)
+      );
+
   height: 100vh;
 
 }
@@ -22,5 +31,5 @@
   width: 1000px;
   height: 1000px;
   border: none;
-  
+
 }
