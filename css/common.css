@@ -33,7 +33,7 @@ body {
     overflow-x: hidden;
 }
 
-a,h1,h2,h3,h4,h5,ol,ul {
+a,h1,h2,h3,h4,h5,ol,ul,p {
     /* 텍스트 공통 */
     margin: 0;
     padding: 0;

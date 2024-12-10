@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url(../css/common.css);
+@import url(/css/common.css);
 
 html,
 body {
@@ -350,6 +350,7 @@ section:nth-child(even) {
   display: block;
 
 }
+
 
 /*****************************s3***************************/
 
