@@ -8,15 +8,15 @@ body {
 
 /******************************** manu  ******************************* */
 
-#top.on .nav :nth-child(1) {
-    text-decoration: line-through tomato;
-    filter: brightness(50%);
-}
-
-#top.on .nav :nth-child(2):hover {
+#top.on .nav :nth-child(1):hover {
     text-decoration: line-through tomato;
     filter: drop-shadow(2px 4px 6px black);
     transition: text-decoration .5s ease-in;
+}
+
+#top.on .nav :nth-child(2) {
+    text-decoration: line-through tomato;
+    filter: brightness(50%);
 }
 
 #top.on .nav :nth-child(3):hover {

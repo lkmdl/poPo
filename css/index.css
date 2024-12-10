@@ -77,7 +77,8 @@ h3 {
 
 /* 페이지 최상위 부모박스 */
 .wrap {
-    width: 700vw;
+    width: 300vw;
+    /* width: 700vw; */
     /* 보이는 화면의 7개 */
     display: flex;
 
