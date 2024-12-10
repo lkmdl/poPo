@@ -5,280 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Page - Auto Scroll</title>
-    <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            /* 보이는 화면기준 채우기 */
-            /* body하위 요소의 높이값 %의 기준이됨! */
-            overflow: hidden;
-            /* 스크롤숨김(스크롤안됨!) */
-        }
-
-        /* 공통셋팅 */
-        a {
-            text-decoration: none;
-            color: #fff;
-            text-shadow: 0 0 2px #777;
-        }
-
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        ul::after {
-            /* float해제 */
-            content: '';
-            display: block;
-            clear: both;
-        }
-
-        li {
-            float: left;
-            /* 옆으로 흐르게 */
-        }
-
-        img {
-            border: none;
-            /* 이미지 링크시 테두리없앰 */
-        }
-
-        h1,
-        h2,
-        h3 {
-            margin: 0;
-            padding: 0;
-            font-size: 100%;
-        }
-
-        /* 공통 class */
-
-        /* 페이지 공통 class */
-        .page {
-            /* 한페이지 보이는 화면 채우기 */
-            width: 100%;
-            height: 100%;
-            /* 
-                width: 100vw;
-                height: 100vh;
-                보이는 화면 기준의 뷰포트단위를 쓰면
-                body의 height 100%가 필요없다!
-                왜냐하면 보이는 화면을 기준하니까!
-                단, vw단위는 스크롤바 트랙까지 포함한
-                화면 전체를 기준하므로
-                데스트탑에서는 100%를 사용하는게 좋다!
-                (이유는 가로스크롤바가 생기게 되므로!)
-             */
-        }
-
-        /* IR(배경이미지 설명 숨기기) class */
-        .ir {
-            display: block;
-            width: 0;
-            height: 0;
-            overflow: hidden;
-        }
-
-        /* 중앙 속박스 */
-        .ibx {
-            width: 1920px;
-            max-width: 100%;
-            /* 1920px보다 작을땐 100%를 유지함! */
-            margin: 0 auto;
-            /* 마영오 - 중앙정렬 */
-        }
-
-        /* 1. 상단영역 */
-        #top {
-            position: fixed;
-            /* 상단고정-보이는화면기준 */
-            width: 100%;
-            z-index: 9999;
-            /* 맨위! */
-            background-color: rgba(0, 0, 0, .7);
-        }
-
-        /* 상단영역 속박스 */
-        .top {
-            position: relative;
-            /* 부모자격 */
-            height: 80px;
-        }
-
-        /* 1-1.로고 */
-        #logo {
-            width: 250px;
-            height: 100%;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        #logo img {
-            width: 100%;
-            margin-top: -24px;
-        }
-
-        /* 1-2. GNB 메뉴 */
-        .gnb {
-            position: absolute;
-            /* 부모는? .top */
-            top: 40px;
-            right: 2%;
-        }
-
-        .gnb li {
-            margin: 0 7px;
-        }
-
-        /* 메뉴에 마우스 오버시 + 부모li에 .on인 경우 */
-        .gnb a:hover,
-        .gnb li.on a {
-            display: inline-block;
-            /* 트랜스폼적용위해 */
-            color: lime;
-            text-decoration: overline;
-            /* 윗줄 */
-            transform: scale(1.1);
-        }
-
-        /* 2. 페이지영역 */
-        /* 개별 페이지 셋팅 */
-        #pg1 {
-            background: url(images/pic1.png) no-repeat top/cover;
-        }
-
-        #pg2 {
-            background: url(images/pic2.png) no-repeat top/cover;
-        }
-
-        #pg3 {
-            background: url(images/pic3.png) no-repeat top/cover;
-        }
-
-        #pg4 {
-            background: url(images/pic4.png) no-repeat top/cover;
-        }
-
-        #pg5 {
-            background: url(images/pic5.png) no-repeat top/cover;
-        }
-
-        #pg6 {
-            background: url(images/pic6.png) no-repeat top/cover;
-        }
-
-        #pg7 {
-            background: url(images/pic7.png) no-repeat top/cover;
-        }
-
-        /* 인디케이터 */
-        .indic {
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-            /* 세로중앙이동 */
-            left: 5%;
-            width: 20px;
-            /* outline: 3px dotted blue; */
-        }
-
-        .indic li {
-            width: 100%;
-            height: 10px;
-            margin: 3px 0;
-            cursor: pointer;
-            /* 손가락모양 */
-        }
-
-        /* a요소 */
-        .indic a {
-            display: block;
-            width: 100%;
-            height: 2px;
-            margin-top: 4px;
-            background-color: #ccc;
-            box-shadow: 1px 1px 1px #777;
-            transition: width .4s;
-        }
-
-        /* 마우스 오버시 + 클래스 "on" */
-        .indic li:hover a,
-        .indic li.on a {
-            width: 150%;
-            background-color: #fff;
-        }
-
-
-        /* 설명글자숨기기 */
-        .indic span {
-            display: none;
-        }
-    </style>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery-autoScroll-1.0.js"></script>
-    <script>
-        ///////////// 로딩구역 //////////////////////////////////
-        $(function () { ////// jQB ///////////////////////////////
-
-            // a요소 기본이동막기 ///////
-            $("a").click(function (e) {
-                e.preventDefault();
-            }); /////////// click ////////////
-
-            /************************************* 
-                GNB li요소 클릭시 페이지 이동하기
-                + 인디케이터 li요소 클릭시 기능동일!
-            *************************************/
-            // 대상: .gnb li + .indic li
-            $(".gnb li,.indic li").click(function (e) { // e - 이벤트전달값
-
-                // 기본기능막기 : li의 이동기능막기 불필요!
-                // e.preventDefault();
-
-                // 1. 클릭된 li요소의 순번읽어오기
-                // $(this) -> 클릭된 li요소 자신!
-                let idx = $(this).index();
-                // index() 요소(li)의 순번
-                console.log("클릭된 li순번:", idx);
-
-                // 2. 클릭된 순번을 전역 페이지변수 pno에 넣어 일치시키기
-                pno = idx;
-
-                //***************************
-                // 3. 페이지번호를 높이값에 곱하여 스크롤 이동하기
-                // 이동높이값
-                let pos = $(window).height() * pno;
-                // console.log("이동값:", pos);
-                // 이동애니메이션
-                $("html,body").animate({
-                    scrollTop: pos + "px"
-                }, dur_sc, easing_sc);
-                // dur_sc 상수에 공통시간설정
-
-                // 4. 클릭시 .gnb+.indic 의 li에 클래스 on넣기
-                $(".gnb li").eq(pno).addClass("on")
-                // $(gnb전체li).eq(해당순번).클래스넣기("on")
-                .siblings().removeClass("on");
-                // .다른형제들().클래스제거("on")
-
-                $(".indic li").eq(pno).addClass("on")
-                // $(indic전체li).eq(해당순번).클래스넣기("on")
-                .siblings().removeClass("on");
-                // .다른형제들().클래스제거("on")
-
-
-            }); /////////// click ////////////
-
-
-        }); /////////////////// jQB ////////////////////////////
-        ////////////////////////////////////////////////////////
-    </script>
+    <link rel="stylesheet" href="/css/pg2-1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/js/pg2-1.js"></script>
 </head>
 
 <body>
@@ -288,32 +18,32 @@
             <!-- 1-1.로고 -->
             <h1 id="logo">
                 <a href="#">
-                    <img src="images/logo.png" alt="메가박스로고">
+                    <img src="#" alt="로고">
                 </a>
             </h1>
             <!-- 1-2.GNB메뉴 -->
             <nav class="gnb">
                 <ul>
                     <li class="on">
-                        <a href="#pg1">아수라</a>
+                        <a href="#pg1">1st</a>
                     </li>
                     <li>
-                        <a href="#pg2">고산자</a>
+                        <a href="#pg2">2nd</a>
                     </li>
                     <li>
-                        <a href="#pg3">인천상륙작전</a>
+                        <a href="#pg3">3rd</a>
                     </li>
                     <li>
-                        <a href="#pg4">봉이김선달</a>
+                        <a href="#pg4">4th</a>
                     </li>
                     <li>
-                        <a href="#pg5">비밀은없다</a>
+                        <a href="#pg5">5th</a>
                     </li>
                     <li>
-                        <a href="#pg6">아가씨</a>
+                        <a href="#pg6">6th</a>
                     </li>
                     <li>
-                        <a href="#pg7">탐정홍길동</a>
+                        <a href="#pg7">7th</a>
                     </li>
                 </ul>
             </nav>
@@ -333,25 +63,25 @@
     <nav class="indic">
         <ul>
             <li class="on">
-                <a href="#pg1"><span>아수라</span></a>
+                <a href="#pg1"><span>1st</span></a>
             </li>
             <li>
-                <a href="#pg2"><span>고산자</span></a>
+                <a href="#pg2"><span>2nd</span></a>
             </li>
             <li>
-                <a href="#pg3"><span>인천상륙작전</span></a>
+                <a href="#pg3"><span>3rd</span></a>
             </li>
             <li>
-                <a href="#pg4"><span>봉이김선달</span></a>
+                <a href="#pg4"><span>4th</span></a>
             </li>
             <li>
-                <a href="#pg5"><span>비밀은없다</span></a>
+                <a href="#pg5"><span>5th</span></a>
             </li>
             <li>
-                <a href="#pg6"><span>아가씨</span></a>
+                <a href="#pg6"><span>6th</span></a>
             </li>
             <li>
-                <a href="#pg7"><span>탐정홍길동</span></a>
+                <a href="#pg7"><span>7th</span></a>
             </li>
         </ul>
     </nav>
