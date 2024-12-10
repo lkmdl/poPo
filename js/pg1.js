@@ -6,11 +6,18 @@ window.addEventListener("DOMContentLoaded",()=>{
   /******************************************************
    ******************************************************/
  let enter = document.querySelector(".go");
+ let info = document.querySelector("#pg3 a");
  /******************************************************
   ******************************************************/
   enter.onclick =
   ()=>{
     location.href = "https://lkmdl.github.io/poPo/html/pg1-1.html";
+    
+  }
+
+  info.onclick =
+  ()=>{
+    location.href = "https://lkmdl.github.io/poPo/html/info.html";
     
   }
 
