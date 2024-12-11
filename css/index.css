@@ -11,12 +11,12 @@ html::after{
     z-index:-1;
     
     /* load images */
-    content:
-    url(../img/pg1/join1.png)
-    url(../img/pg1/join2.png)
+    background-image:
+    url(../img/pg1/join1.png),
+    url(../img/pg1/join2.png),
     url(../img/pg2/free_porsche_911_carrera_4s.glb)
     ;
-     /* 필요한 이미지 소스들 다운 */
+
 }
 
 
