@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded",()=>{
   /******************************************************
    ******************************************************/
  let enter = document.querySelector(".go");
- let info = document.querySelector("#pg3 a");
+ let info = document.querySelector("#pg3 .name");
  /******************************************************
   ******************************************************/
   enter.onclick =
