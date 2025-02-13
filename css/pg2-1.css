@@ -128,7 +128,7 @@ header .logo {
     /*1250 625 317.5 158.75 */
     height: 350px;
     /*1400 700 350 175 */
-    background: url(/img/pg2/carLogo.png)
+    background: url(../img/pg2/carLogo.png)
     no-repeat center / 100% 100%;
     ;
 
