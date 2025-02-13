@@ -70,7 +70,7 @@ $(function () { ////// jQB //////////////////////
      ******************************************************/
      logo.onclick =
      ()=>{
-       location.href = "#";
+       location.href = "https://lkmdl.github.io/poPo/html/pg2-1.html";
        
      }
 
