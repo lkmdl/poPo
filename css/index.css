@@ -1,194 +1,385 @@
 @charset "utf-8";
-@import url(../css/common.css);
-
-@import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
-html::after{
-	/* 소스만 다운받고 화면은 나태내지 않는다. (숨김 처리) */
-    position:absolute; 
-    width:0; 
-    height:0; 
-    overflow:hidden; 
-    z-index:-1;
-    
-    /* load images */
-    background-image:
-    url(../img/pg1/join1.png),
-    url(../img/pg1/join2.png),
-    url(../img/pg2/free_porsche_911_carrera_4s.glb)
-    ;
-
-}
-
+@import url(/css/common.css);
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    /* 보이는 화면기준 채우기 */
-    /* body하위 요소의 높이값 %의 기준이됨! */
-    overflow: hidden;
-    /* 스크롤숨김(스크롤안됨!) */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5em;
+  scroll-behavior: smooth;
+
 }
 
-/* body * {
-    outline : 3px dotted red;
-
-} */
-
-/* 공통셋팅 */
-a {
-    text-decoration: none;
-    color: black;
-    text-shadow: 0 0 2px #fff;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-ul::after {
-    /* float해제 */
-    content: '';
-    display: block;
-    clear: both;
-}
-
-li {
-    float: left;
-    /* 옆으로 흐르게 */
-}
-
-img {
-    border: none;
-    /* 이미지 링크시 테두리없앰 */
-}
-
+a,
+ul,
+ol,
 h1,
 h2,
-h3 {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-}
-
-/* 페이지 최상위 부모박스 */
-.wrap {
-    width: 300vw;
-    /* width: 700vw; */
-    /* 보이는 화면의 7개 */
-    display: flex;
+h3,
+p,
+img {
+  margin: 0;
+  padding: 0;
 
 }
 
-/* 공통 class */
-
-/* 페이지 공통 class */
-.page {
-    flex: 1;
-    /* width, height 크기설정 불필요 */
-    /* 한페이지 보이는 화면 채우기 */
-    /* width: 100%; */
-    /* height: 100%; */
-    /* 
-                width: 100vw;
-                height: 100vh;
-                보이는 화면 기준의 뷰포트단위를 쓰면
-                body의 height 100%가 필요없다!
-                왜냐하면 보이는 화면을 기준하니까!
-                단, vw단위는 스크롤바 트랙까지 포함한
-                화면 전체를 기준하므로
-                데스트탑에서는 100%를 사용하는게 좋다!
-                (이유는 가로스크롤바가 생기게 되므로!)
-             */
-    /* z-index: -1; */
+h2 {
+  font-size: 3em;
 
 }
 
-/* IR(배경이미지 설명 숨기기) class */
-.ir {
-    display: block;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-}
+/* 
+body * {
+  outline: 1px dotted tomato;
 
-/* 중앙 속박스 */
-.ibx {
-    width: 1920px;
-    max-width: 100%;
-    /* 1920px보다 작을땐 100%를 유지함! */
-    margin: 0 auto;
-    /* 마영오 - 중앙정렬 */
 }
+*/
 
-/* 1. 상단영역 */
-#top {
-    position: fixed;
-    /* 상단고정-보이는화면기준 */
-    width: 100%;
-    z-index: 9999;
-    /* 맨위! */
+
+ol,
+ul {
+  list-style: none;
 
 }
 
-/* 상단영역 속박스 */
-.top {
-    position: relative;
-    /* 부모자격 */
-    height: 80px;
-}
 
-/* 1-2. GNB 메뉴 */
-.gnb {
-    position: absolute;
-    /* 부모는? .top */
-    /* top: 40px; */
-    bottom: -80vh;
-    right: 2%;
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 
 }
 
-.gnb li {
-    margin: 0 7px;
+.inner-gred {
+  margin: 0 10%;
+
 }
 
-/* 메뉴에 마우스 오버시 + 부모li에 .on인 경우 */
-.gnb a:hover,
-.gnb li.on a {
-    display: inline-block;
-    /* 트랜스폼적용위해 */
+/* 
+.full-gred {
 
-    text-decoration: line-through;
-    /* 윗줄 */
-    transform: scale(1.1);
+}
+*/
+
+.text-gred {
+  padding: 90 0 0 0;
+
 }
 
-/* 2. 페이지영역 */
-/* 개별 페이지 셋팅 */
-/* #pg1 {} */
+.text-sub-gred {
+  width: 100%;
+  display: block;
+  font-size: .6em;
 
-/* #pg2 {} */
+}
+
+.solid {
+  margin-top: 10px;
+  display: block;
+  border-bottom: 1px solid #000;
+
+}
+
+.rel {
+  position: relative;
+
+}
+
+.toBtn {
+  position: absolute;
+  display: block;
+  top: 60%;
+  right: 60px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transform: rotate(225deg);
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  transition: transform .25s;
+
+}
+
+.toBtn.on {
+  /* position: absolute;
+  display: block;
+  top: 75%;
+  right: 37px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  transition: transform .25s; */
+  transform: rotate(45deg);
+
+}
+
+.Folding_box {
+  overflow: hidden;
+  height: 0px;
+  transition: all 1s ease;
+  
+}
+
+.Folding_box > span {
+  margin: 0 50px;
+  
+}
+
+.Folding_box.on {
+  height:
+  /* 50vh; */
+  calc(100vh - 244.55px);
+
+}
+
+
+/* ////////////////////////////////////////////////////////////// */
+
+.header_wrap {
+  position: fixed;
+  width: calc(100% - 100px);
+  height: 90px;
+  font-size: 18px;
+  padding: 0 50px;
+  background-color: #fff;
+  z-index: 99999;
+
+}
+
+.header-container {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.nav-container {
+  width: 38.5%;
+  height: 30%;
+  display: flex;
+
+}
+
+.nav-widget {
+  width: 23.5%;
+  display: flex;
+
+}
+
+.logo {
+  width: 50%;
+  display: block;
+
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
 
 
 
-/* #pg3 {} */
-#pg4 {
-    background-color: rgba(153, 0, 0, 0.568);
+header nav {
+  width: 100%;
+  margin-left: 30px;
 
- }
-#pg5 {
-    background-color: rgba(153, 0, 0, 0.426);
+}
 
- }
-#pg6 {
-    background-color: rgba(153, 0, 0, 0.284);
+header .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
- }
-#pg7 {
-    background-color: rgba(153, 0, 0, 0.142);
+}
 
- }
+.nav-menu a:hover {
+  text-decoration: underline 2px;
+  color: black;
+
+
+}
+
+.widget-hash {
+  display: flex;
+
+}
+
+.hash-rolling-wrap {
+  height: 24px;
+  overflow: hidden;
+}
+
+.rolling-list {
+  position: relative;
+  top: 0px;
+  height: 100%;
+  font-size: 2em;
+  font-weight: bolder;
+  animation: rollingNav 10s linear infinite;
+
+}
+
+@keyframes rollingNav {
+  to {
+    top: -800%;
+
+  }
+}
+
+.footer_wrap {
+  display: flex;
+  padding: 0 50px;
+  width: calc(100% - 100px);
+  height: 61px;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+footer nav {
+  width: 20%;
+}
+
+footer .nav-menu {
+  width: 100%;
+  display: flex;
+  font-size: .4em;
+  font-weight: 550;
+  justify-content: space-between;
+
+}
+
+.info {
+  width: 35%;
+  display: flex;
+  font-size: .4em;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+/****************************공통****************************/
+
+#container {
+  padding-top: 90px;
+
+}
+
+section:nth-child(even) {
+  background-color: #f1f1f1;
+
+}
+
+.cont {
+  height: 100%;
+}
+
+
+
+
+/***************************banner*****************************/
+#section-banner .banner-box {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  width: 100%;
+  height: calc(100% - 233.64px);
+
+
+}
+
+/****************************s1****************************/
+
+#section-1 .cont-a div:hover {
+  background-color: rgb(155 192 227);
+
+}
+
+#section-1 .cont-a div {
+  display: flex;
+  height: 25%;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+#section-1 .cont .simbal_box {
+  height: 80%;
+
+}
+
+#section-1 .simbal_box a {
+  height: 100%;
+
+}
+
+#section-1 .cont img {
+  height: 100%;
+
+}
+
+
+/***************************s2*****************************/
+
+#section-2 .Folding_box .cont {
+  height: 100%;
+  display: flex;
+  align-items: center
+  
+}
+
+
+#section-2 .Folding_box .cont img {
+  height: 100%;
+
+}
+
+
+#section-2 .conect_info {
+  height: fit-content;
+
+}
+
+
+#section-2 .conect_info span {
+  display: block;
+
+}
+
+
+/*****************************s3***************************/
+
+#section-3 .table {
+  width: 100%;
+  height: 100%;
+
+}
+
+#section-3 .table td {
+  width: 25%;
+  font-size: 1em;
+  border-bottom: .5px dotted #000;
+  text-align: center;
+
+
+}
+
+
+/***************************s4*****************************/
+
+#section-4 {
+  background-color: #fff;
+  height: fit-content;
+
+}
+
+#section-4 img {
+  width: 100%;
+  height: 100%;
+
+}
