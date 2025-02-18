@@ -335,6 +335,7 @@ section:nth-child(even) {
 
 
 #section-2 .Folding_box .cont img {
+  width: 50%;
   height: 100%;
 
 }
