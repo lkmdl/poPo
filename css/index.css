@@ -277,21 +277,44 @@ section:nth-child(even) {
 
 .cont {
   height: 100%;
+
 }
 
 
 
 
 /***************************banner*****************************/
-#section-banner .banner-box {
+#section-banner .banner_box {
   display: flex;
   flex-direction: column;
-  font-size: 1.5em;
   width: 100%;
   height: calc(100% - 233.64px);
 
 
 }
+
+#section-banner .banner_box h2 {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  font-size: 14vw;
+
+}
+
+#section-banner .banner_box h2:hover {
+  background: linear-gradient(to right,
+   red, orange,
+   yellow, green,
+   blue, navy,
+   purple   
+   );
+   background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent;
+
+}
+
+
 
 /****************************s1****************************/
 
